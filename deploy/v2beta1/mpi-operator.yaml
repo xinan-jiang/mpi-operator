@@ -8101,7 +8101,7 @@ metadata:
 aggregationRule:
   clusterRoleSelectors:
   - matchLabels:
-      rbac.authorization.kubeflow.org/aggregate-to-kubeflow-mpijobs-admin: "true"
+      rbac.authorization.kubeflow.org/aggregate-to-taiji-mpijobs-admin: "true"
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -8111,7 +8111,7 @@ metadata:
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
     rbac.authorization.kubeflow.org/aggregate-to-kubeflow-admin: "true"
-  name: kubeflow-mpijobs-admin
+  name: taiji-mpijobs-admin
 rules: []
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -8123,8 +8123,8 @@ metadata:
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
     rbac.authorization.kubeflow.org/aggregate-to-kubeflow-edit: "true"
-    rbac.authorization.kubeflow.org/aggregate-to-kubeflow-mpijobs-admin: "true"
-  name: kubeflow-mpijobs-edit
+    rbac.authorization.kubeflow.org/aggregate-to-taiji-mpijobs-admin: "true"
+  name: taiji-mpijobs-edit
 rules:
 - apiGroups:
   - taiji.tencent.com
@@ -8150,7 +8150,7 @@ metadata:
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
     rbac.authorization.kubeflow.org/aggregate-to-kubeflow-view: "true"
-  name: kubeflow-mpijobs-view
+  name: taiji-mpijobs-view
 rules:
 - apiGroups:
   - taiji.tencent.com
