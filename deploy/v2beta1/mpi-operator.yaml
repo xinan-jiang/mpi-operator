@@ -28,9 +28,9 @@ metadata:
     app.kubernetes.io/component: mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
-  name: mpijobs.kubeflow.org
+  name: mpijobs.taiji.tencent.com
 spec:
-  group: kubeflow.org
+  group: taiji.tencent.com
   names:
     kind: MPIJob
     listKind: MPIJobList
@@ -8127,7 +8127,7 @@ metadata:
   name: kubeflow-mpijobs-edit
 rules:
 - apiGroups:
-  - kubeflow.org
+  - taiji.tencent.com
   resources:
   - mpijobs
   - mpijobs/status
@@ -8153,7 +8153,7 @@ metadata:
   name: kubeflow-mpijobs-view
 rules:
 - apiGroups:
-  - kubeflow.org
+  - taiji.tencent.com
   resources:
   - mpijobs
   - mpijobs/status
@@ -8233,7 +8233,7 @@ rules:
   - create
   - get
 - apiGroups:
-  - kubeflow.org
+  - taiji.tencent.com
   resources:
   - mpijobs
   - mpijobs/finalizers
