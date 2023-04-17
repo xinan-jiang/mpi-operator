@@ -22,7 +22,7 @@ import (
 
 const (
 	// GroupName is the group name use in this package.
-	GroupName = "kubeflow.org"
+	GroupName = "taiji.tencent.com"
 	// Kind is the kind name.
 	Kind = "MPIJob"
 	// GroupVersion is the version.
