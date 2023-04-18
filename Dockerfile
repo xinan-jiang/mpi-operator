@@ -10,7 +10,7 @@ WORKDIR /go/src/github.com/kubeflow/mpi-operator
 RUN make RELEASE_VERSION=${RELEASE_VERSION} mpi-operator.$VERSION
 RUN ln -s mpi-operator.${VERSION} _output/cmd/bin/mpi-operator
 
-FROM gcr.io/distroless/base-debian10:latest
+FROM gcr.io/distroless/base-debian11:latest
 
 ENV CONTROLLER_VERSION=$VERSION
 COPY --from=build /go/src/github.com/kubeflow/mpi-operator/_output/cmd/bin/* /opt/
