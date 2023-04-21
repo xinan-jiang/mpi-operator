@@ -12,7 +12,7 @@ kind: Namespace
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
   name: taiji-mpi-operator
@@ -25,7 +25,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
   name: mpijobs.taiji.tencent.com
@@ -8092,7 +8092,7 @@ kind: ServiceAccount
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
   name: taiji-mpi-operator
@@ -8107,7 +8107,7 @@ kind: ClusterRole
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
     rbac.authorization.kubeflow.org/aggregate-to-kubeflow-admin: "true"
@@ -8119,7 +8119,7 @@ kind: ClusterRole
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
     rbac.authorization.kubeflow.org/aggregate-to-kubeflow-edit: "true"
@@ -8146,7 +8146,7 @@ kind: ClusterRole
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
     rbac.authorization.kubeflow.org/aggregate-to-kubeflow-view: "true"
@@ -8167,7 +8167,7 @@ kind: ClusterRole
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
   name: taiji-mpi-operator
@@ -8275,7 +8275,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
   name: taiji-mpi-operator
@@ -8293,7 +8293,7 @@ kind: Deployment
 metadata:
   labels:
     app: taiji-mpi-operator
-    app.kubernetes.io/component: mpijob
+    app.kubernetes.io/component: taiji-mpijob
     app.kubernetes.io/name: taiji-mpi-operator
     kustomize.component: taiji-mpi-operator
   name: taiji-mpi-operator
@@ -8303,7 +8303,7 @@ spec:
   selector:
     matchLabels:
       app: taiji-mpi-operator
-      app.kubernetes.io/component: mpijob
+      app.kubernetes.io/component: taiji-mpijob
       app.kubernetes.io/name: taiji-mpi-operator
       kustomize.component: taiji-mpi-operator
   template:
@@ -8312,7 +8312,7 @@ spec:
         sidecar.istio.io/inject: "false"
       labels:
         app: taiji-mpi-operator
-        app.kubernetes.io/component: mpijob
+        app.kubernetes.io/component: taiji-mpijob
         app.kubernetes.io/name: taiji-mpi-operator
         kustomize.component: taiji-mpi-operator
     spec:
