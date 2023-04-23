@@ -36,6 +36,8 @@ spec:
     listKind: MPIJobList
     plural: mpijobs
     singular: mpijob
+    shortNames:
+      - tmj
   scope: Namespaced
   versions:
   - name: v2beta1
