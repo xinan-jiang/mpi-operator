@@ -65,7 +65,7 @@ import (
 )
 
 const (
-	controllerAgentName     = "mpi-job-controller"
+	controllerAgentName     = "taiji-mpi-job-controller"
 	configSuffix            = "-config"
 	configVolumeName        = "mpi-job-config"
 	configMountPath         = "/etc/mpi"

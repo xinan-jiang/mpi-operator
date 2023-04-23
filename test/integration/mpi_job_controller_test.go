@@ -893,7 +893,7 @@ func newCleanPodPolicy(policy kubeflow.CleanPodPolicy) *kubeflow.CleanPodPolicy 
 
 func eventForJob(event corev1.Event, job *kubeflow.MPIJob) corev1.Event {
 	event.Namespace = job.Namespace
-	event.Source.Component = "mpi-job-controller"
+	event.Source.Component = "taiji-mpi-job-controller"
 	ref, err := reference.GetReference(scheme.Scheme, job)
 	runtime.Must(err)
 	event.InvolvedObject = *ref
