@@ -54,7 +54,7 @@ import (
 const (
 	apiVersion                   = "v2"
 	RecommendedKubeConfigPathEnv = "KUBECONFIG"
-	controllerName               = "mpi-operator"
+	controllerName               = "taiji-mpi-operator"
 )
 
 var (
@@ -72,8 +72,8 @@ var (
 
 var (
 	isLeader = promauto.NewGauge(prometheus.GaugeOpts{
-		Name: "mpi_operator_is_leader",
-		Help: "Is this client the leader of this mpi-operator client set?",
+		Name: "taiji_mpi_operator_is_leader",
+		Help: "Is this client the leader of this taiji-mpi-operator client set?",
 	})
 )
 
@@ -257,7 +257,7 @@ func Run(opt *options.ServerOption) error {
 				klog.Infof("New leader has been elected: %s", identity)
 			},
 		},
-		Name:     "mpi-operator",
+		Name:     controllerName,
 		WatchDog: electionChecker,
 	})
 
@@ -276,7 +276,7 @@ func createClientSets(
 	error,
 ) {
 
-	kubeClientSet, err := kubeclientset.NewForConfig(restclientset.AddUserAgent(config, "mpi-operator"))
+	kubeClientSet, err := kubeclientset.NewForConfig(restclientset.AddUserAgent(config, controllerName))
 	if err != nil {
 		return nil, nil, nil, nil, nil, err
 	}
